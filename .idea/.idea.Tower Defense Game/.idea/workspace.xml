@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9d1d164f-91d1-4f1a-912a-72d01adb0090" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/PathFinding.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScriptsData/Game/Wave/Wave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A278EBD4-4AB0-472B-B8E6-38263E06CD61/8f/04bc6ec3/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A278EBD4-4AB0-472B-B8E6-38263E06CD61/b7/fc8e8fb2/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Materials/Shaders/Grid.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A278EBD4-4AB0-472B-B8E6-38263E06CD61/e2/74974d80/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/PathGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DOTween/Modules/DOTweenModulePhysics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScriptsData/Projectiles/Abilities/Ability.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Abilities/AbilityTypes.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Towers/Tower.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Towers/Canon.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Utils/Editor/Grid.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Utils/GameTools/HandleObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Utils/Navigation/PathCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Utils/Navigation/Node.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Utils/Navigation/EditorPathCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Materials/Shaders/Grid.shader" />
+        <option value="$PROJECT_DIR$/Assets/scripts/UI/UIContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Utils/GameEditor/Grid.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/UI/UserInterfaceContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Bombs/Bomb.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Towers/Defender.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/UI/Camera/RoomStaticCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Game/Resources/ResorcesProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Abilities/Ability.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Abilities/SpeedAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Abilities/DamageAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Abilities/CloneAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Game/Resources/Pool.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Mobs/Solider.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Game/Wave/WavesHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Game/Wave/Wave.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Mobs/Ufo.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Mobs/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Towers/Mortar.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Towers/Cannon.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Game/Resources/ObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Game/Resources/ResourcesProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Objects/SelectableDefender.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Objects/SelectableBomb.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Objects/SelectableManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Utils/GameEditor/DrawableGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Utils/GameEditor/GridProvider.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/rider64.exe.vmoptions" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Towers/ArcherTower.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles/Objects/SelectableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Wave/WavesHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Wave/Wave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Resources/ObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/ScriptsData/Game/Wave/Wave.cs" />
+        <option value="$PROJECT_DIR$/Assets/ScriptsData/Game/Wave/WavesHandler.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Vbp9DyC0vaAqnXTwdgVA9Zk4fJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11664">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="11664" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d1d164f-91d1-4f1a-912a-72d01adb0090" name="Default Changelist" comment="" />
+      <created>1577531496943</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577531496943</updated>
+      <workItem from="1577531502732" duration="1521000" />
+      <workItem from="1577533776894" duration="9014000" />
+      <workItem from="1577549530093" duration="10270000" />
+      <workItem from="1577574339929" duration="1143000" />
+      <workItem from="1577577076558" duration="45175000" />
+      <workItem from="1577721684821" duration="6471000" />
+      <workItem from="1577747021275" duration="1887000" />
+      <workItem from="1578062106344" duration="132000" />
+      <workItem from="1578062354524" duration="75000" />
+      <workItem from="1578062824466" duration="4988000" />
+      <workItem from="1578264199014" duration="9527000" />
+      <workItem from="1578528034425" duration="1589000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="WindowStateProjectService">
+    <state x="294" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578529814483">
+      <screen x="0" y="0" width="1680" height="1020" />
+    </state>
+    <state x="294" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1020@0.0.1680.1020" timestamp="1578529814483" />
+    <state width="1681" height="348" key="GridCell.Tab.0.bottom" timestamp="1578529833178">
+      <screen x="0" y="0" width="1680" height="1020" />
+    </state>
+    <state width="1681" height="348" key="GridCell.Tab.0.bottom/0.0.1680.1020@0.0.1680.1020" timestamp="1578529833178" />
+    <state width="1681" height="348" key="GridCell.Tab.0.center" timestamp="1578529833178">
+      <screen x="0" y="0" width="1680" height="1020" />
+    </state>
+    <state width="1681" height="348" key="GridCell.Tab.0.center/0.0.1680.1020@0.0.1680.1020" timestamp="1578529833178" />
+    <state width="1681" height="348" key="GridCell.Tab.0.left" timestamp="1578529833177">
+      <screen x="0" y="0" width="1680" height="1020" />
+    </state>
+    <state width="1681" height="348" key="GridCell.Tab.0.left/0.0.1680.1020@0.0.1680.1020" timestamp="1578529833177" />
+    <state width="1681" height="348" key="GridCell.Tab.0.right" timestamp="1578529833178">
+      <screen x="0" y="0" width="1680" height="1020" />
+    </state>
+    <state width="1681" height="348" key="GridCell.Tab.0.right/0.0.1680.1020@0.0.1680.1020" timestamp="1578529833178" />
+    <state x="92" y="92" width="1496" height="836" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578528290096">
+      <screen x="0" y="0" width="1680" height="1020" />
+    </state>
+    <state x="92" y="92" width="1496" height="836" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1020@0.0.1680.1020" timestamp="1578528290096" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

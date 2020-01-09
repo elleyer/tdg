@@ -1,0 +1,122 @@
+fileFormatVersion: 2
+guid: 4c76b1b32744cee408dae4d3a689b6cb
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
+  missingFiles:
+  - Assets/maps/23 11 2019/one.png
+  errors:
+  - 'Missing texture asset: ../../../../karmaproj/Assets/23 11 2019/one.png'
+  - 'Missing texture asset: ../23 11 2019/one.png'
+  - Could not find tile 1881. Make sure the tilesets were successfully imported.
+  - Could not find tile 1882. Make sure the tilesets were successfully imported.
+  - Could not find tile 1883. Make sure the tilesets were successfully imported.
+  - Could not find tile 1884. Make sure the tilesets were successfully imported.
+  - Could not find tile 1885. Make sure the tilesets were successfully imported.
+  - Could not find tile 1886. Make sure the tilesets were successfully imported.
+  - Could not find tile 1887. Make sure the tilesets were successfully imported.
+  - Could not find tile 1888. Make sure the tilesets were successfully imported.
+  - Could not find tile 1889. Make sure the tilesets were successfully imported.
+  - Could not find tile 1890. Make sure the tilesets were successfully imported.
+  - Could not find tile 1891. Make sure the tilesets were successfully imported.
+  - Could not find tile 1897. Make sure the tilesets were successfully imported.
+  - Could not find tile 1898. Make sure the tilesets were successfully imported.
+  - Could not find tile 1921. Make sure the tilesets were successfully imported.
+  - Could not find tile 2003. Make sure the tilesets were successfully imported.
+  - Could not find tile 2004. Make sure the tilesets were successfully imported.
+  - Could not find tile 2006. Make sure the tilesets were successfully imported.
+  - Could not find tile 2007. Make sure the tilesets were successfully imported.
+  - Could not find tile 1927. Make sure the tilesets were successfully imported.
+  - Could not find tile 1928. Make sure the tilesets were successfully imported.
+  - Could not find tile 1929. Make sure the tilesets were successfully imported.
+  - Could not find tile 1930. Make sure the tilesets were successfully imported.
+  - Could not find tile 1931. Make sure the tilesets were successfully imported.
+  - Could not find tile 2015. Make sure the tilesets were successfully imported.
+  - Could not find tile 2016. Make sure the tilesets were successfully imported.
+  - Could not find tile 2338. Make sure the tilesets were successfully imported.
+  - Could not find tile 2043. Make sure the tilesets were successfully imported.
+  - Could not find tile 2044. Make sure the tilesets were successfully imported.
+  - Could not find tile 1967. Make sure the tilesets were successfully imported.
+  - Could not find tile 1968. Make sure the tilesets were successfully imported.
+  - Could not find tile 1969. Make sure the tilesets were successfully imported.
+  - Could not find tile 1970. Make sure the tilesets were successfully imported.
+  - Could not find tile 1971. Make sure the tilesets were successfully imported.
+  - Could not find tile 2255. Make sure the tilesets were successfully imported.
+  - Could not find tile 2256. Make sure the tilesets were successfully imported.
+  - Could not find tile 2083. Make sure the tilesets were successfully imported.
+  - Could not find tile 2084. Make sure the tilesets were successfully imported.
+  - Could not find tile 1942. Make sure the tilesets were successfully imported.
+  - Could not find tile 2295. Make sure the tilesets were successfully imported.
+  - Could not find tile 2296. Make sure the tilesets were successfully imported.
+  - Could not find tile 2123. Make sure the tilesets were successfully imported.
+  - Could not find tile 2124. Make sure the tilesets were successfully imported.
+  - Could not find tile 1335. Make sure the tilesets were successfully imported.
+  - Could not find tile 1336. Make sure the tilesets were successfully imported.
+  - Could not find tile 2335. Make sure the tilesets were successfully imported.
+  - Could not find tile 2336. Make sure the tilesets were successfully imported.
+  - Could not find tile 2011. Make sure the tilesets were successfully imported.
+  - Could not find tile 2055. Make sure the tilesets were successfully imported.
+  - Could not find tile 2056. Make sure the tilesets were successfully imported.
+  - Could not find tile 2095. Make sure the tilesets were successfully imported.
+  - Could not find tile 2096. Make sure the tilesets were successfully imported.
+  - Could not find tile 2135. Make sure the tilesets were successfully imported.
+  - Could not find tile 2136. Make sure the tilesets were successfully imported.
+  - Could not find tile 2163. Make sure the tilesets were successfully imported.
+  - Could not find tile 2175. Make sure the tilesets were successfully imported.
+  - Could not find tile 2176. Make sure the tilesets were successfully imported.
+  - Could not find tile 2203. Make sure the tilesets were successfully imported.
+  - Could not find tile 2215. Make sure the tilesets were successfully imported.
+  - Could not find tile 2216. Make sure the tilesets were successfully imported.
+  - Could not find tile 2243. Make sure the tilesets were successfully imported.
+  - Could not find tile 1376. Make sure the tilesets were successfully imported.
+  - Could not find tile 2283. Make sure the tilesets were successfully imported.
+  - Could not find tile 2323. Make sure the tilesets were successfully imported.
+  - Could not find tile 1375. Make sure the tilesets were successfully imported.
+  - Could not find tile 2167. Make sure the tilesets were successfully imported.
+  - Could not find tile 2164. Make sure the tilesets were successfully imported.
+  - Could not find tile 2204. Make sure the tilesets were successfully imported.
+  - Could not find tile 2244. Make sure the tilesets were successfully imported.
+  - Could not find tile 2284. Make sure the tilesets were successfully imported.
+  - Could not find tile 2324. Make sure the tilesets were successfully imported.
+  - Could not find tile 2378. Make sure the tilesets were successfully imported.
+  - Could not find tile 2418. Make sure the tilesets were successfully imported.
+  - Could not find tile 2363. Make sure the tilesets were successfully imported.
+  - Could not find tile 2364. Make sure the tilesets were successfully imported.
+  - Could not find tile 2365. Make sure the tilesets were successfully imported.
+  - Could not find tile 2366. Make sure the tilesets were successfully imported.
+  - Could not find tile 2367. Make sure the tilesets were successfully imported.
+  - Could not find tile 1810. Make sure the tilesets were successfully imported.
+  - Could not find tile 2370. Make sure the tilesets were successfully imported.
+  - Could not find tile 2371. Make sure the tilesets were successfully imported.
+  - Could not find tile 2372. Make sure the tilesets were successfully imported.
+  - Could not find tile 2373. Make sure the tilesets were successfully imported.
+  - Could not find tile 2374. Make sure the tilesets were successfully imported.
+  - Could not find tile 2375. Make sure the tilesets were successfully imported.
+  - Could not find tile 2376. Make sure the tilesets were successfully imported.
+  - Could not find tile 2458. Make sure the tilesets were successfully imported.
+  - Could not find tile 2481. Make sure the tilesets were successfully imported.
+  - Could not find tile 2482. Make sure the tilesets were successfully imported.
+  - Could not find tile 2498. Make sure the tilesets were successfully imported.
+  warnings:
+  - Tileset 'ground1' is an embedded tileset. Exported tilesets are preferred.
+  - "Tileset '\u043E\u0434\u0438\u043D' is an embedded tileset. Exported tilesets
+    are preferred."
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 21
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 4
+  tilesAsObjects: 0
+  sortingMode: 0
+  isIsometric: 0
+  customImporterClassName: 
+  internalTilesets:
+  - {instanceID: 0}
+  - {instanceID: 0}
