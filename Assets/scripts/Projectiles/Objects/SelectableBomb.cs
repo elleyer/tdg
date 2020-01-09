@@ -1,7 +1,8 @@
 using System;
-using ScriptsData.Projectiles.Bombs;
+using Projectiles.Bombs;
+using UnityEngine;
 
-namespace ScriptsData.Projectiles.Objects
+namespace Projectiles.Objects
 {
     public class SelectableBomb : SelectableObject //TODO: Class, responsible for ...?
     {

@@ -1,7 +1,7 @@
-using ScriptsData.Utils.Navigation;
 using UnityEngine;
+using Utils.Navigation;
 
-namespace ScriptsData.Game.Resources
+namespace Game.Resources
 {
     public class ResourcesProvider : MonoBehaviour
     {

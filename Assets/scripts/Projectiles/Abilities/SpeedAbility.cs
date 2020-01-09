@@ -1,4 +1,6 @@
-namespace ScriptsData.Projectiles.Abilities
+using UnityEngine;
+
+namespace Projectiles.Abilities
 {
     public class SpeedAbility : Ability
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ScriptsData.Projectiles.Abilities
+namespace Projectiles.Abilities
 {
     public class Ability : MonoBehaviour //Base ability class
     {

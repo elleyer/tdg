@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using ScriptsData.Game.Resources;
-using ScriptsData.Projectiles.Mobs;
+using Game.Resources;
+using Projectiles.Mobs;
 using UnityEngine;
 
-namespace ScriptsData.Game.Wave
+namespace Game.Wave
 {
     public class WavesHandler : MonoBehaviour //Wave controller that should check currently game state
     {
@@ -63,6 +63,6 @@ namespace ScriptsData.Game.Wave
             StopCoroutine($"SpawnEnemies");
         }
 
-        private void OnAllEnemiesDestroyed() => NextWave(); //Call next wave if all enemies are destroyed
+        private void OnAllEnemiesDestroyed()=> NextWave(); //Call next wave if all enemies are destroyed
     }
 }

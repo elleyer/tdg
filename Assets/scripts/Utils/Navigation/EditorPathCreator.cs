@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace ScriptsData.Utils.Navigation
+namespace Utils.Navigation
 {
     [CustomEditor(typeof(PathCreator))]
     public class EditorPathCreator : Editor

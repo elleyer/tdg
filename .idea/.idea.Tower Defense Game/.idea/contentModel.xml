@@ -21,66 +21,113 @@
             <e p="Grid.shader" t="Include" />
           </e>
         </e>
-        <e p="ScriptsData" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="AI.meta" t="Include" />
+          <e p="Audio.meta" t="Include" />
           <e p="Game" t="Include">
             <e p="Resources" t="Include">
               <e p="ObjectPool.cs" t="Include" />
+              <e p="ObjectPool.cs.meta" t="Include" />
               <e p="Pool.cs" t="Include" />
+              <e p="Pool.cs.meta" t="Include" />
               <e p="ResourcesProvider.cs" t="Include" />
+              <e p="ResourcesProvider.cs.meta" t="Include" />
             </e>
+            <e p="Resources.meta" t="Include" />
             <e p="Wave" t="Include">
               <e p="Wave.cs" t="Include" />
+              <e p="Wave.cs.meta" t="Include" />
               <e p="WavesHandler.cs" t="Include" />
+              <e p="WavesHandler.cs.meta" t="Include" />
             </e>
+            <e p="Wave.meta" t="Include" />
           </e>
+          <e p="Game.meta" t="Include" />
           <e p="Projectiles" t="Include">
             <e p="Abilities" t="Include">
               <e p="Ability.cs" t="Include" />
+              <e p="Ability.cs.meta" t="Include" />
               <e p="CloneAbility.cs" t="Include" />
+              <e p="CloneAbility.cs.meta" t="Include" />
               <e p="DamageAbility.cs" t="Include" />
+              <e p="DamageAbility.cs.meta" t="Include" />
               <e p="SpeedAbility.cs" t="Include" />
+              <e p="SpeedAbility.cs.meta" t="Include" />
             </e>
+            <e p="Abilities.meta" t="Include" />
             <e p="Bombs" t="Include">
               <e p="Bomb.cs" t="Include" />
+              <e p="Bomb.cs.meta" t="Include" />
             </e>
+            <e p="Bombs.meta" t="Include" />
             <e p="Mobs" t="Include">
               <e p="Enemy.cs" t="Include" />
+              <e p="Enemy.cs.meta" t="Include" />
               <e p="Solider.cs" t="Include" />
+              <e p="Solider.cs.meta" t="Include" />
               <e p="Ufo.cs" t="Include" />
+              <e p="Ufo.cs.meta" t="Include" />
             </e>
+            <e p="Mobs.meta" t="Include" />
             <e p="Objects" t="Include">
               <e p="SelectableBomb.cs" t="Include" />
+              <e p="SelectableBomb.cs.meta" t="Include" />
               <e p="SelectableDefender.cs" t="Include" />
+              <e p="SelectableDefender.cs.meta" t="Include" />
               <e p="SelectableManager.cs" t="Include" />
+              <e p="SelectableManager.cs.meta" t="Include" />
               <e p="SelectableObject.cs" t="Include" />
+              <e p="SelectableObject.cs.meta" t="Include" />
             </e>
+            <e p="Objects.meta" t="Include" />
             <e p="Towers" t="Include">
               <e p="ArcherTower.cs" t="Include" />
+              <e p="ArcherTower.cs.meta" t="Include" />
               <e p="Cannon.cs" t="Include" />
+              <e p="Cannon.cs.meta" t="Include" />
               <e p="Defender.cs" t="Include" />
+              <e p="Defender.cs.meta" t="Include" />
               <e p="Mortar.cs" t="Include" />
+              <e p="Mortar.cs.meta" t="Include" />
             </e>
+            <e p="Towers.meta" t="Include" />
           </e>
+          <e p="Projectiles.meta" t="Include" />
           <e p="UI" t="Include">
             <e p="Camera" t="Include">
               <e p="RoomStaticCamera.cs" t="Include" />
+              <e p="RoomStaticCamera.cs.meta" t="Include" />
             </e>
+            <e p="Camera.meta" t="Include" />
             <e p="UserInterfaceContainer.cs" t="Include" />
+            <e p="UserInterfaceContainer.cs.meta" t="Include" />
+            <e p="Window.meta" t="Include" />
           </e>
+          <e p="UI.meta" t="Include" />
           <e p="Utils" t="Include">
             <e p="GameEditor" t="Include">
               <e p="DrawableGrid.cs" t="Include" />
+              <e p="DrawableGrid.cs.meta" t="Include" />
               <e p="GridProvider.cs" t="Include" />
+              <e p="GridProvider.cs.meta" t="Include" />
             </e>
+            <e p="GameEditor.meta" t="Include" />
             <e p="GameTools" t="Include">
               <e p="HandleObject.cs" t="Include" />
+              <e p="HandleObject.cs.meta" t="Include" />
             </e>
+            <e p="GameTools.meta" t="Include" />
             <e p="Navigation" t="Include">
               <e p="EditorPathCreator.cs" t="Include" />
+              <e p="EditorPathCreator.cs.meta" t="Include" />
               <e p="Node.cs" t="Include" />
+              <e p="Node.cs.meta" t="Include" />
               <e p="PathCreator.cs" t="Include" />
+              <e p="PathCreator.cs.meta" t="Include" />
             </e>
+            <e p="Navigation.meta" t="Include" />
           </e>
+          <e p="Utils.meta" t="Include" />
         </e>
         <e p="SuperTiled2Unity" t="Include">
           <e p="Examples" t="Include">

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ScriptsData.Utils.GameTools
+namespace Utils.GameTools
 {
     public class HandleObject : MonoBehaviour
     {

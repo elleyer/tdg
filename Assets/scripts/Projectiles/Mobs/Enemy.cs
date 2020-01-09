@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using ScriptsData.Game.Wave;
-using ScriptsData.Utils.Navigation;
+using System.Linq;
+using Game.Resources;
+using Game.Wave;
 using UnityEngine;
+using Utils.Navigation;
 
-namespace ScriptsData.Projectiles.Mobs
+namespace Projectiles.Mobs
 {
     public class Enemy : MonoBehaviour //Base class for all the Enemies
     {

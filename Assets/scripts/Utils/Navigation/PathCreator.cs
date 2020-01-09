@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-
-namespace ScriptsData.Utils.Navigation
+namespace Utils.Navigation
 {
     public class PathCreator : MonoBehaviour
     {

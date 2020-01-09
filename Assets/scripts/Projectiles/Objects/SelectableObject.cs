@@ -1,11 +1,12 @@
 using System;
-using ScriptsData.Game.Resources;
-using ScriptsData.Projectiles.Towers;
-using ScriptsData.UI;
+using Game.Resources;
+using Projectiles.Bombs;
+using Projectiles.Towers;
+using UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace ScriptsData.Projectiles.Objects
+namespace Projectiles.Objects
 {
     public class SelectableObject : MonoBehaviour //Base class for all selectable objects
     {

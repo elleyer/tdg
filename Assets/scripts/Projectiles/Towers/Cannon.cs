@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ScriptsData.Projectiles.Towers
+namespace Projectiles.Towers
 {
     public class Cannon : Defender //Cannon class with it's own params
     {

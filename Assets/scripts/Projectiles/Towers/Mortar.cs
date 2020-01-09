@@ -1,4 +1,6 @@
-namespace ScriptsData.Projectiles.Towers
+using UnityEngine;
+
+namespace Projectiles.Towers
 {
     public class Mortar : Defender //Mortar class with it's own params
     {

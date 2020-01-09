@@ -1,7 +1,7 @@
-using ScriptsData.Utils.GameEditor;
 using UnityEngine;
+using Utils.GameEditor;
 
-namespace ScriptsData.UI
+namespace UI
 {
     public class UserInterfaceContainer : MonoBehaviour
     {

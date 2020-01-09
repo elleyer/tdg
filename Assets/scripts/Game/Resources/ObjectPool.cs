@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ScriptsData.Game.Resources
+namespace Game.Resources
 {
     public class ObjectPool : MonoBehaviour
     {

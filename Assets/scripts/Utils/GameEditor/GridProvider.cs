@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace ScriptsData.Utils.GameEditor
+namespace Utils.GameEditor
 {
     public class GridProvider : MonoBehaviour
     {

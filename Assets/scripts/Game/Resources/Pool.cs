@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using ScriptsData.Game.Wave;
-using ScriptsData.Projectiles.Mobs;
-using ScriptsData.Projectiles.Towers;
+using Game.Wave;
+using Projectiles.Mobs;
+using Projectiles.Towers;
 using UnityEngine;
 
-namespace ScriptsData.Game.Resources
+namespace Game.Resources
 {
     public class Pool : MonoBehaviour
     {

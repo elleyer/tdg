@@ -1,4 +1,7 @@
-namespace ScriptsData.Projectiles.Mobs
+using System;
+using UnityEngine;
+
+namespace Projectiles.Mobs
 {
     public class Solider : Enemy
     {

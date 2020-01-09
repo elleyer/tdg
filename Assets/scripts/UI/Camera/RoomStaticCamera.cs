@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ScriptsData.UI.Camera
+namespace UI.Camera
 {
 
     public class RoomStaticCamera : MonoBehaviour

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using ScriptsData.Projectiles.Mobs;
+using Projectiles.Mobs;
 using UnityEngine;
 
-namespace ScriptsData.Game.Wave
+namespace Game.Wave
 {
     public class Wave
     {

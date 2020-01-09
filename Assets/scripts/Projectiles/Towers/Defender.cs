@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-namespace ScriptsData.Projectiles.Towers
+namespace Projectiles.Towers
 {
     public class Defender : MonoBehaviour //Basic defender class that all other types derives from.
     {

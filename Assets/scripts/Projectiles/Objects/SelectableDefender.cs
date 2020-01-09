@@ -1,7 +1,11 @@
 using System;
-using ScriptsData.Projectiles.Towers;
+using Projectiles.Towers;
+using UI;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using Utils.GameEditor;
 
-namespace ScriptsData.Projectiles.Objects
+namespace Projectiles.Objects
 {
     public class SelectableDefender : SelectableObject
     {

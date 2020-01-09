@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ScriptsData.Utils.Navigation
+namespace Utils.Navigation
 {
     public class Node : MonoBehaviour //Base node data
     {

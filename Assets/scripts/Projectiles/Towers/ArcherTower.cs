@@ -1,4 +1,7 @@
-namespace ScriptsData.Projectiles.Towers
+using System;
+using UnityEngine;
+
+namespace Projectiles.Towers
 {
     public class ArcherTower : Defender //ArcherTower class with it's own params
     {

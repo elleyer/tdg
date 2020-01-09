@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ScriptsData.Projectiles.Bombs
+namespace Projectiles.Bombs
 {
     public class Bomb : MonoBehaviour
     {

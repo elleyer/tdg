@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
-using ScriptsData.Game.Resources;
+using Game.Resources;
 using UnityEngine;
 
-namespace ScriptsData.Projectiles.Objects
+namespace Projectiles.Objects
 {
     public class SelectableManager : MonoBehaviour
     {
