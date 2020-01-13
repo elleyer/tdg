@@ -1,3 +1,19 @@
-﻿fileFormatVersion: 2
+fileFormatVersion: 2
 guid: 4cfa4bf23d424e4ea39fb47788178ef9
-timeCreated: 1577709083
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Tower: {fileID: 7266730035851444776, guid: 0fbe0ba664efcb640b908f8ba52afc3b, type: 3}
+  - Mortar: {fileID: 554229446535588635, guid: 0fb128fcff3dca84385ca59f073bd195, type: 3}
+  - Cannon: {instanceID: 0}
+  - Bomb: {instanceID: 0}
+  - Bullet: {instanceID: 0}
+  - Rocket: {instanceID: 0}
+  - Ufo: {instanceID: 0}
+  - Solider: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

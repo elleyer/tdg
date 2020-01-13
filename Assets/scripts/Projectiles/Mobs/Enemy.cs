@@ -6,12 +6,13 @@ using Game.Resources;
 using Game.Wave;
 using UnityEngine;
 using Utils.Navigation;
+using Game.Resources.Items;
 
 namespace Projectiles.Mobs
 {
     public class Enemy : MonoBehaviour //Base class for all the Enemies
     {
-        public int Health = 100;
+        public float Health = 100;
         public float Speed;
         public float Damage;
         public EnemyType EnemyType;
@@ -36,7 +37,7 @@ namespace Projectiles.Mobs
             {
                 while (transform.position != t.position)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, t.transform.position, Speed / 100f);
+                    transform.position = Vector2.MoveTowards(transform.position, t.transform.position, Speed / 64f);
                     yield return new WaitForFixedUpdate();
                 }
             }
@@ -49,7 +50,14 @@ namespace Projectiles.Mobs
                 Destroyed?.Invoke(this);
             }
         }
+
+
+        public void Hit(float value)
+        {
+            Health -= value;
+        }
     }
+
 
     public enum EnemyType
     {

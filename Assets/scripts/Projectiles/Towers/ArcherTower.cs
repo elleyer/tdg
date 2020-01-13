@@ -8,8 +8,11 @@ namespace Projectiles.Towers
         public void Start()
         {
             Damage = 10;
+            MaxDamage = 60;
             MinRadius = 0;
-            MaxRadius = 0.64f * 7;
+            MaxRadius = 7;
+            Cooldown = 0.5f;
+            MinCooldown = 0.2f;
         }
     }
 }

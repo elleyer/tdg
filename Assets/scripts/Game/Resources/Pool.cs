@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Game.Resources.Profile;
 using Game.Wave;
 using Projectiles.Mobs;
 using Projectiles.Towers;
@@ -8,23 +9,24 @@ namespace Game.Resources
 {
     public class Pool : MonoBehaviour
     {
-        public List<Defender> Defenders;
-        public List<Enemy> Enemies;
+        public List<Defender> Defenders { get; } = new List<Defender>();
+        public List<Enemy> Enemies { get; } = new List<Enemy>();
+
         public event WavesHandler.DestroyedHandler AllEnemiesDestroyed;
         internal void AddEnemy(Enemy enemy)
         {
             Enemies.Add(enemy);
-            Debug.Log(enemy.name);
             enemy.Destroyed += OnEnemyDestroyed;
+            enemy.Destroyed += ProfileInfo.Instance.Wallet.AddBalanceByEnemy;
         }
 
         internal void AddDefender(Defender defender) => Defenders.Add(defender);
 
         private void OnEnemyDestroyed(Enemy enemy)
         {
-            Debug.Log($"{enemy.Health} destroyed");
-            Destroy(enemy.gameObject);
+            ProfileInfo.Instance.Statistics.EnemiesDestroyed++;
             RemoveFromPool(enemy);
+            Destroy(enemy.gameObject);
         }
 
         private void RemoveFromPool(Enemy enemy)
@@ -38,7 +40,8 @@ namespace Game.Resources
 
         private void RemoveFromPool(Defender defender)
         {
-
+            if(Defenders.Contains(defender))
+                Defenders.Remove(defender);
         }
     }
 }

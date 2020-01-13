@@ -22,11 +22,9 @@ namespace Game.Wave
             var list = new List<EnemyName>();
             var airCount = Mathf.RoundToInt(EnemyCount / 100f * AirPercentage);
             var groundCount = EnemyCount - airCount;
-            Debug.Log($"{airCount} {groundCount}");
 
             for (var i = 0; i < airCount; i++)
             {
-                Debug.Log("ufo++");
                 list.Add(EnemyName.Ufo);
             }
             for (var i = 0; i < groundCount; i++)

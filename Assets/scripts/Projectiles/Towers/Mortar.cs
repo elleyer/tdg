@@ -1,3 +1,4 @@
+using Game.Resources.Items;
 using UnityEngine;
 
 namespace Projectiles.Towers
@@ -7,8 +8,12 @@ namespace Projectiles.Towers
         public void Start()
         {
             Damage = 10;
-            MinRadius = 0.64f * 3;
-            MaxRadius = 0.64f * 5;
+            MaxDamage = 50;
+            MinRadius = 1;
+            MaxRadius = 3;
+            Cooldown = 1f;
+            MinCooldown = 0.5f;
+            AmmoType = AmmoType.Rocket;
         }
     }
 }

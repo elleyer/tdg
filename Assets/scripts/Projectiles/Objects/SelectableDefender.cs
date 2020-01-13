@@ -22,35 +22,18 @@ namespace Projectiles.Objects
                     break;
                 case DefenderType.ArcherTower:
                     Price = 400;
-                    Height = 4;
-                    Width = 4;
+                    Height = 3;
+                    Width = 3;
                     break;
                 case DefenderType.Mortar:
                     Price = 500;
-                    Height = 3;
-                    Width = 3;
+                    Height = 2;
+                    Width = 2;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
             ObjectType = ObjectType.Defender; //We should say that our object is Defender.
         }
-
-/*        private new void Update()
-        {
-            if (!Input.GetMouseButtonDown(0))
-                return;
-            switch (DefType)
-            {
-                case DefenderType.ArcherTower:
-                    break;
-                case DefenderType.Cannon:
-                    break;
-                case DefenderType.Mortar:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        }*/
     }
 }

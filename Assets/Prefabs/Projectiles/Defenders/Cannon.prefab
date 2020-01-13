@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1471633391723990827}
   - component: {fileID: 8573898527680698965}
   - component: {fileID: 2681975134001455236}
+  - component: {fileID: -3745203232607868441}
+  - component: {fileID: 3482732029896998608}
+  - component: {fileID: -207193535500791560}
   m_Layer: 12
   m_Name: Cannon
   m_TagString: Untagged
@@ -107,3 +110,48 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.71, y: 1.85}
   m_EdgeRadius: 0
+--- !u!114 &-3745203232607868441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2684244955991306274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 367b52ea607c18649a5b6ec649756206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesProvider: {fileID: 0}
+--- !u!114 &3482732029896998608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2684244955991306274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6411f28349114db19fe9a0f972e7069f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 0
+  MaxDamage: 0
+  MinRadius: 0
+  MaxRadius: 0
+  Cooldown: 0
+  MinCooldown: 0
+  Attacking: 0
+  AmmoType: 0
+--- !u!114 &-207193535500791560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2684244955991306274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53aecadb84e44df3bd9ee58fe2b06d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

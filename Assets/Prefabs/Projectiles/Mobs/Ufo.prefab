@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4534263b8294641a870d58066602efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
+  Health: 100
   Speed: 0
   Damage: 0
-  EnemyType: 1
+  EnemyType: 0
   Reward: 0

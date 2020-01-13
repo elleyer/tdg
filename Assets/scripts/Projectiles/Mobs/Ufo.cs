@@ -9,7 +9,8 @@ namespace Projectiles.Mobs
         {
             EnemyType = EnemyType.Air;
             Health = 100;
-            Speed = 1.5f;
+            Speed = 2.5f;
+            Reward = 750;
         }
     }
 }

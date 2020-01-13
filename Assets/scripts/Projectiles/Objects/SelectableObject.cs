@@ -1,5 +1,6 @@
 using System;
 using Game.Resources;
+using Game.Resources.Profile;
 using Projectiles.Bombs;
 using Projectiles.Towers;
 using UI;
@@ -10,13 +11,11 @@ namespace Projectiles.Objects
 {
     public class SelectableObject : MonoBehaviour //Base class for all selectable objects
     {
-        public float Price;
-        public int Height, Width;
+        internal float Price;
+        internal int Height, Width;
+        internal SelectableManager SelectableManager;
+
         public ObjectType ObjectType;
-
-        public SelectableManager SelectableManager;
-        public ResourcesProvider ResourcesProvider;
-
 
         private UserInterfaceContainer _container;
         private Vector2 _defaultPosition;
@@ -25,7 +24,6 @@ namespace Projectiles.Objects
 
         public void Start()
         {
-            ResourcesProvider = SelectableManager.ResourcesProvider;
             _container = GameObject.FindGameObjectWithTag("UI Container").GetComponent<UserInterfaceContainer>();
 
             var rect = GetComponent<RectTransform>();
@@ -92,28 +90,37 @@ namespace Projectiles.Objects
             Debug.Log($"Placed new object with price {Price} and h&w {Height} & {Width}");
         }
 
-        private void PlaceObject(Vector3 position, ObjectType objectType)
+        private void PlaceObject(Vector3 position, ObjectType objectType) //TODO: probably we need handle this shit better than now
         {
+            GameObject gObject;
+            if (!ProfileInfo.Instance.Wallet.CanWithdraw((uint)Price))
+                return;
+            ProfileInfo.Instance.Wallet.Withdraw((uint)Price);
+            ProfileInfo.Instance.Statistics.DefendersCreated++;
             switch (objectType)
             {
                 case ObjectType.Defender:
                     switch (gameObject.GetComponent<SelectableDefender>().DefType)
                     {
                         case DefenderType.ArcherTower:
-                            Instantiate(ResourcesProvider.ObjectPool.Tower, position, Quaternion.identity);
+                            gObject = Instantiate(ResourcesProvider.Instance.ObjectPool.Tower, position,
+                                Quaternion.identity);
                             break;
                         case DefenderType.Cannon:
-                            Instantiate(ResourcesProvider.ObjectPool.Cannon, position, Quaternion.identity);
+                            gObject = Instantiate(ResourcesProvider.Instance.ObjectPool.Cannon, position,
+                                Quaternion.identity);
                             break;
                         case DefenderType.Mortar:
-                            Instantiate(ResourcesProvider.ObjectPool.Mortar, position, Quaternion.identity);
+                            gObject = Instantiate(ResourcesProvider.Instance.ObjectPool.Mortar, position,
+                                Quaternion.identity);
                             break;
                         default:
                             throw new ArgumentOutOfRangeException();
                     }
+                    ResourcesProvider.Instance.Pool.AddDefender(gObject.GetComponent<Defender>());
                     break;
                 case ObjectType.Bomb:
-                    Instantiate(ResourcesProvider.ObjectPool.Bomb, position, Quaternion.identity);
+                    gObject = Instantiate(ResourcesProvider.Instance.ObjectPool.Bomb, position, Quaternion.identity);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(objectType), objectType, null);

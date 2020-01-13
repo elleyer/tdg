@@ -1,9 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using AI.EnemySelector;
 using Game.Resources;
+using Game.Resources.Profile;
+using UI.Window;
 using Projectiles.Mobs;
 using UnityEngine;
+using Screen = UI.Window.Screen;
 
 namespace Game.Wave
 {
@@ -11,9 +15,7 @@ namespace Game.Wave
     {
         public int CurrentWave;
         public Wave Wave;
-        private ResourcesProvider _resourcesProvider; //ref to rhe resources provider
         private Pool _pool; //Pool with all active objects
-        [SerializeField] private GameObject _soliderPrefab, _ufoPrefab;
         [SerializeField] private Transform _parent;
         private List<EnemyName> _enemyNames;
 
@@ -23,18 +25,28 @@ namespace Game.Wave
 
         private void Start()
         {
-            _resourcesProvider = GetComponent<ResourcesProvider>();
-            _pool = _resourcesProvider.Pool;
+            _pool = ResourcesProvider.Instance.Pool;
             _pool.AllEnemiesDestroyed += OnAllEnemiesDestroyed; //Subscribe on method that handle this behaviour
         }
 
-        public void NextWave() //Add smth like "Battle result" as arguments
+        private void NextWave() //Add smth like "Battle result" as arguments
         {
             CurrentWave++;
             Wave = new Wave(10 * CurrentWave, 20, 1000 * CurrentWave);
+            foreach (var defender in _pool.Defenders)
+            {
+                defender.GetComponent<EnemySelectorHandler>().PlayableWave = true;
+            }
             _enemyNames = Wave.GetEnemies();
             StartCoroutine(SpawnEnemies(Wave.EnemyCount, 1f));
-            Debug.Log($"{Wave.EnemyCount} {Wave.AirPercentage} {Wave.Reward}");
+            StartCoroutine(UpdateList());
+        }
+
+        private void WavePassed()
+        {
+            ProfileInfo.Instance.Wallet.AddBalance((uint)(1000*CurrentWave));
+            ProfileInfo.Instance.Statistics.WavesPassed++;
+            Screen.Instance.Push(ScreenType.WavePassed);
         }
 
         private IEnumerator SpawnEnemies(int enemyCount, float timeDelay) //Spawn enemies with given delay
@@ -46,23 +58,33 @@ namespace Game.Wave
                 switch (_enemyNames[i])
                 {
                     case EnemyName.Solider:
-                        enemyName = _soliderPrefab;
+                        enemyName = ResourcesProvider.Instance.ObjectPool.Solider;
                         break;
                     case EnemyName.Ufo:
-                        enemyName = _ufoPrefab;
+                        enemyName = ResourcesProvider.Instance.ObjectPool.Ufo;
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
-
                 var enemy = Instantiate(enemyName, _parent.transform).GetComponent<Enemy>();
-                enemy.SetPath(_resourcesProvider.PathCreator.Nodes); //push nodes to enemy path
+                enemy.SetPath(ResourcesProvider.Instance.PathCreator.Nodes); //push nodes to enemy path
                 _pool.AddEnemy(enemy); //Add enemy to the pool
                 yield return new WaitForSeconds(timeDelay); //Wait for delay
             }
             StopCoroutine($"SpawnEnemies");
         }
 
-        private void OnAllEnemiesDestroyed()=> NextWave(); //Call next wave if all enemies are destroyed
+        private IEnumerator UpdateList()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(1);
+            }
+        }
+        private void OnAllEnemiesDestroyed()
+        {
+            WavePassed();
+            NextWave();
+        } //Call next wave if all enemies are destroyed
     }
 }

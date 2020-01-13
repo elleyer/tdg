@@ -7,13 +7,11 @@ namespace Projectiles.Towers
         public void Start()
         {
             Damage = 10;
+            MaxDamage = 70;
             MinRadius = 0;
-            MaxRadius = 0.64f * 5;
-        }
-
-        private void Update()
-        {
-            Debug.Log("Am shootin'");
+            MaxRadius = 3;
+            Cooldown = 1f;
+            MinCooldown = 0.3f;
         }
     }
 }
