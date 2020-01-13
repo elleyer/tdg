@@ -45,8 +45,8 @@ namespace Game.Wave
         private void WavePassed()
         {
             ProfileInfo.Instance.Wallet.AddBalance((uint)(1000*CurrentWave));
-            ProfileInfo.Instance.Statistics.WavesPassed++;
-            Screen.Instance.Push(ScreenType.WavePassed);
+            ProfileInfo.Instance.Statistics.WavePassed();
+            Screen.Instance.Push(0);
         }
 
         private IEnumerator SpawnEnemies(int enemyCount, float timeDelay) //Spawn enemies with given delay
@@ -54,7 +54,7 @@ namespace Game.Wave
             for (var i = 0; i < enemyCount; i++)
             {
                 GameObject enemyName;
-
+                ProfileInfo.Instance.Statistics.EnemyCreated();
                 switch (_enemyNames[i])
                 {
                     case EnemyName.Solider:

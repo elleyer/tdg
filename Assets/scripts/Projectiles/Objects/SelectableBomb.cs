@@ -1,5 +1,6 @@
 using System;
 using Projectiles.Bombs;
+using UI;
 using UnityEngine;
 
 namespace Projectiles.Objects
@@ -11,7 +12,6 @@ namespace Projectiles.Objects
         private new void Start()
         {
             base.Start();
-
             switch (BombType)
             {
                 case Bomb.BombTypes.C4:
@@ -27,6 +27,21 @@ namespace Projectiles.Objects
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        protected override void Calculate()
+        {
+            PlaceAble = true;
+            var converted = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var rounded = new Vector3(Mathf.RoundToInt(converted.x * 2) * 0.5f,
+                Mathf.RoundToInt(converted.y * 2) * 0.5f, 0);
+
+            gameObject.transform.position = rounded;
+
+            UserInterfaceContainer.Instance.GridProvider.UpdateGridProperties(rounded, PlaceAble ? Color.cyan : Color.red, PlaceAble);
+
+            if(Selected && PlaceAble && Input.GetMouseButtonDown(0))
+                PlaceObject(rounded, ObjectType);
         }
     }
 }

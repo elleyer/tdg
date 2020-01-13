@@ -6,8 +6,9 @@ namespace UI.Window
 {
     public class Screen : MonoBehaviour
     {
-        public static Screen Instance = null;
-        internal CanvasGroup InfoBlock, SelectableBlock, UpgradeableBlock;
+        public static Screen Instance;
+        public Window WinResult, LoseResult, WavePassed, InfoHint, LowHealth;
+        internal CanvasGroup UpgradeableBlock, SelectableBlock, InfoBlock;
         private bool _upgradableBlockHidden;
 
         private void Awake()
@@ -18,9 +19,28 @@ namespace UI.Window
                 Destroy(gameObject);
         }
 
-        public void Push(ScreenType screenType) //TODO: push screen at UI
+        public void Push(int screenType) //TODO: push screen
         {
-
+            switch ((ScreenType)screenType)
+            {
+                case ScreenType.WavePassed:
+                    WavePassed.Show(3);
+                    break;
+                case ScreenType.Fail:
+                    LoseResult.Show(15);
+                    break;
+                case ScreenType.Win:
+                    WinResult.Show(15);
+                    break;
+                case ScreenType.GameInfo:
+                    InfoHint.Show(3);
+                    break;
+                case ScreenType.LowHealth:
+                    LowHealth.Show(5);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(screenType), screenType, null);
+            }
         }
 
         public void HandleUserInterface(UserInterfaceType type)
@@ -66,7 +86,9 @@ namespace UI.Window
     {
         WavePassed,
         Fail,
-        Win
+        Win,
+        GameInfo,
+        LowHealth
     }
 
     public enum UserInterfaceType

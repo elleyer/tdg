@@ -279,6 +279,10 @@
               <e p="EnemySelectorHandler.cs" t="Include" />
             </e>
           </e>
+          <e p="Audio" t="Include">
+            <e p="AudioPool.cs" t="Include" />
+            <e p="AudioProvider.cs" t="Include" />
+          </e>
           <e p="Game" t="Include">
             <e p="Resources" t="Include">
               <e p="Items" t="Include">
@@ -338,6 +342,7 @@
             <e p="UserInterfaceContainer.cs" t="Include" />
             <e p="Window" t="Include">
               <e p="Screen.cs" t="Include" />
+              <e p="Window.cs" t="Include" />
             </e>
           </e>
           <e p="Utils" t="Include">

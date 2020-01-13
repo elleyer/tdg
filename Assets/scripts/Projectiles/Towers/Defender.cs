@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Audio;
 using Projectiles.Mobs;
 using UnityEngine;
 using Game.Resources;
@@ -17,6 +18,7 @@ namespace Projectiles.Towers
         public float Cooldown, MinCooldown;
         public bool Attacking;
         public AmmoType AmmoType;
+        public EnemyType EnemyType;
 
         public void StartAttack(Enemy enemy)
         {
@@ -29,29 +31,43 @@ namespace Projectiles.Towers
         {
             DamageLevel = CooldownLevel = 1;
         }
+
         private IEnumerator Attack(Enemy enemy)
         {
             while (true)
             {
-                if (Attacking)
+                if (enemy != null)
                 {
-                    GameObject weaponInstance;
-                    switch (AmmoType)
+                    if (Attacking && Vector2.Distance(gameObject.transform.position, enemy.transform.position) <=
+                        MaxRadius && (EnemyType == enemy.EnemyType || EnemyType == EnemyType.Both))
                     {
-                        case AmmoType.Bullet:
-                            weaponInstance = Instantiate(ResourcesProvider.Instance.ObjectPool.Bullet, gameObject.transform.position, Quaternion.identity);
-                            break;
-                        case AmmoType.Rocket:
-                            weaponInstance = Instantiate(ResourcesProvider.Instance.ObjectPool.Rocket, gameObject.transform.position, Quaternion.identity);
-                            break;
-                        default:
-                            throw new ArgumentOutOfRangeException();
+                        GameObject weaponInstance;
+                        switch (AmmoType)
+                        {
+                            case AmmoType.Bullet:
+                                AudioProvider.Instance.AudioSource.PlayOneShot(AudioProvider.Instance.AudioPool
+                                    .BlasterShot);
+                                weaponInstance = Instantiate(ResourcesProvider.Instance.ObjectPool.Bullet,
+                                    gameObject.transform.position, Quaternion.identity);
+                                break;
+                            case AmmoType.Rocket:
+                                AudioProvider.Instance.AudioSource.PlayOneShot(AudioProvider.Instance.AudioPool
+                                    .RocketShot);
+                                weaponInstance = Instantiate(ResourcesProvider.Instance.ObjectPool.Rocket,
+                                    gameObject.transform.position, Quaternion.identity);
+                                break;
+                            default:
+                                throw new ArgumentOutOfRangeException();
+                        }
+
+                        var bullet = weaponInstance.GetComponent<Bullet>();
+                        bullet.Type = AmmoType;
+                        bullet.Owner = this;
+                        StartCoroutine(BulletAssist.MoveToEnemy(bullet, enemy, AmmoType, this));
                     }
-                    var bullet = weaponInstance.GetComponent<Bullet>();
-                    bullet.Type = AmmoType;
-                    bullet.Owner = this;
-                    StartCoroutine(BulletAssist.MoveToEnemy(bullet, enemy, AmmoType, this));
+                    else Attacking = false;
                 }
+                else Attacking = false;
                 yield return new WaitForSeconds(Cooldown);
             }
         }

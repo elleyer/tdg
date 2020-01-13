@@ -26,6 +26,7 @@ namespace Utils.GameEditor
             _drawableGrid.UpdateState(color);
         }
 
+        public bool IsPlaceAble() => _drawableGrid.GetState();
         public void RemoveGrid() => Destroy(_drawableGrid.gameObject);
 
         public bool IsAvailable => _drawableGrid != null;

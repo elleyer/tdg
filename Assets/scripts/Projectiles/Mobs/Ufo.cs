@@ -1,6 +1,3 @@
-using System;
-using UnityEngine;
-
 namespace Projectiles.Mobs
 {
     public class Ufo : Enemy
@@ -10,7 +7,7 @@ namespace Projectiles.Mobs
             EnemyType = EnemyType.Air;
             Health = 100;
             Speed = 2.5f;
-            Reward = 750;
+            Reward = 150;
         }
     }
 }

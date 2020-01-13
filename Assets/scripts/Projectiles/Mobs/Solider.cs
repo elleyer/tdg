@@ -1,6 +1,3 @@
-using System;
-using UnityEngine;
-
 namespace Projectiles.Mobs
 {
     public class Solider : Enemy
@@ -10,7 +7,7 @@ namespace Projectiles.Mobs
             EnemyType = EnemyType.Ground;
             Health = 100;
             Speed = 1;
-            Reward = 1000;
+            Reward = 100;
         }
     }
 }

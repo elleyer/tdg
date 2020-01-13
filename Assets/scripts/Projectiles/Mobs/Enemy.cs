@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Game.Resources;
 using Game.Wave;
 using UnityEngine;
 using Utils.Navigation;
-using Game.Resources.Items;
 
 namespace Projectiles.Mobs
 {
@@ -21,7 +17,7 @@ namespace Projectiles.Mobs
 
         public event WavesHandler.EnemyHandler Destroyed;
 
-        internal void SetPath(IEnumerable<Node> nodes) //We should say to enemy how to go to the end. Accepts list of nodes as data
+        internal void SetPath(IEnumerable<Node> nodes) //We should say to enemy how to go to the end. Push list of nodes as data
         {
             foreach (var data in nodes)
             {
@@ -62,7 +58,8 @@ namespace Projectiles.Mobs
     public enum EnemyType
     {
         Ground,
-        Air
+        Air,
+        Both
     }
 
     public enum EnemyName

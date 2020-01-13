@@ -1,12 +1,13 @@
 using Game.Resources.Items;
-using UnityEngine;
+using Projectiles.Mobs;
 
 namespace Projectiles.Towers
 {
     public class Mortar : Defender //Mortar class with it's own params
     {
-        public void Start()
+        public void Awake()
         {
+            EnemyType = EnemyType.Ground;
             Damage = 10;
             MaxDamage = 50;
             MinRadius = 1;

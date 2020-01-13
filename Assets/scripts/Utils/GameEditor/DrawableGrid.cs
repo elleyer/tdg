@@ -12,6 +12,7 @@ namespace Utils.GameEditor
         private static readonly int BaseColour = Shader.PropertyToID("_BaseColour");
         public Material Material;
         private BoxCollider2D _collider;
+        private bool _placeAble = true;
 
         public void Start()
         {
@@ -47,9 +48,16 @@ namespace Utils.GameEditor
             }
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        public bool GetState() => _placeAble;
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log(other.gameObject.name);
+            _placeAble = false;
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            _placeAble = true;
         }
     }
 }

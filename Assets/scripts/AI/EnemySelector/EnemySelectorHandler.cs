@@ -27,10 +27,12 @@ namespace AI.EnemySelector
                     yield return new WaitUntil(() => PlayableWave);
                 var comparer = Mathf.Infinity;
                 foreach (var enemy in ResourcesProvider.Instance.Pool.Enemies.ToList().Where(enemy =>
-                    Vector2.Distance(enemy.transform.position, gameObject.transform.position) < comparer))
+                    Vector2.Distance(enemy.transform.position, gameObject.transform.position) < comparer
+                                      && (_defender.EnemyType == enemy.EnemyType || _defender.EnemyType == EnemyType.Both)))
                 {
                     comparer = Vector2.Distance(enemy.transform.position, gameObject.transform.position);
                     _enemy = enemy;
+                    Debug.Log($"I am {_defender.EnemyType} and he is {enemy.EnemyType}({enemy.name})");
                     if (comparer < _defender.MaxRadius && _enemy.Health > 0)
                     {
                         if (!_defender.Attacking)

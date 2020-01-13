@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 namespace UI.Camera
 {
@@ -12,14 +13,13 @@ namespace UI.Camera
         private Vector2 _nextPos;
         [SerializeField] private int _inertiaPower;
 
-
         private void Start() => _cameraPosition = _nextPos;
 
-        public void OnMouseDrag()
+        public void Update()
         {
             var objPos = _camera.ScreenToWorldPoint(Input.mousePosition);
             objPos.z = 0;
-            Debug.Log(objPos);
+
             var camVertExtent = _camera.orthographicSize;
             var camHorzExtent = _camera.aspect * camVertExtent;
 
@@ -31,10 +31,10 @@ namespace UI.Camera
             var camX = Mathf.Clamp(objPos.x, leftBound, rightBound);
             var camY = Mathf.Clamp(objPos.y, bottomBound, topBound);
 
-            _camera.transform.position = new Vector3(camX, camY, -10);
-            
+            if (Input.GetMouseButton(1))
+                _camera.transform.DOMove(new Vector3(camX, camY, -10), 1f);
+
             _nextPos.y = camX > 0 ? camY + _inertiaPower : camY - _inertiaPower;
-            Debug.Log(_nextPos);
         }
     }
 }

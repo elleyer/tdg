@@ -24,7 +24,7 @@ namespace Game.Resources
 
         private void OnEnemyDestroyed(Enemy enemy)
         {
-            ProfileInfo.Instance.Statistics.EnemiesDestroyed++;
+            ProfileInfo.Instance.Statistics.EnemyDestroyed();
             RemoveFromPool(enemy);
             Destroy(enemy.gameObject);
         }
