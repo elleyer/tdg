@@ -7,7 +7,7 @@ namespace UI
 {
     public class InfoBlockData : MonoBehaviour
     {
-        public TextMeshProUGUI WalletInfo, WavesInfo, DestroyedInfo, AliveInfo, DefenderInfo;
+        public TextMeshProUGUI WalletInfo, WavesInfo, DestroyedInfo, AliveInfo, DefenderInfo, TowerInfo;
 
         private void Start()
         {
@@ -26,5 +26,7 @@ namespace UI
         public void UpdateWavesInfo(int value) => WavesInfo.text = $"Waves passed: {value.ToString()}";
 
         public void UpdateDefenderInfo(int value) => DefenderInfo.text = $"Defenders: {value.ToString()}";
+
+        public void UpdateTowerHealth(int value) => TowerInfo.text = $"Tower health: {value.ToString()}";
     }
 }

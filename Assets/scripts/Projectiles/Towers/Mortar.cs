@@ -8,12 +8,13 @@ namespace Projectiles.Towers
         public void Awake()
         {
             EnemyType = EnemyType.Ground;
-            Damage = 10;
+            Damage = 30;
             MaxDamage = 50;
             MinRadius = 1;
             MaxRadius = 3;
             Cooldown = 1f;
             MinCooldown = 0.5f;
+            MaxCooldown = 1f;
             AmmoType = AmmoType.Rocket;
         }
     }

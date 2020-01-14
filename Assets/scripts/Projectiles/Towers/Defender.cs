@@ -5,17 +5,18 @@ using Projectiles.Mobs;
 using UnityEngine;
 using Game.Resources;
 using Game.Resources.Items;
+using UnityEngine.UI;
 
 namespace Projectiles.Towers
 {
     public class Defender : MonoBehaviour //Basic defender class that all other types derives from. Probably we need to use interface here
     {
+        public Image DamageFill, CoolDownFill;
         public float Damage, MaxDamage;
         public int DamageLevel;
         public int CooldownLevel;
         public float MinRadius, MaxRadius;
-        //public float BulletSpeed, MaxBulletSpeed;
-        public float Cooldown, MinCooldown;
+        public float Cooldown, MinCooldown, MaxCooldown;
         public bool Attacking;
         public AmmoType AmmoType;
         public EnemyType EnemyType;
@@ -27,9 +28,10 @@ namespace Projectiles.Towers
             StartCoroutine(Attack(enemy));
         }
 
-        private void Awake()
+        private void Start()
         {
-            DamageLevel = CooldownLevel = 1;
+            DamageFill.fillAmount = 1 / MaxDamage * Damage;
+            CoolDownFill.fillAmount = 1 / Cooldown * MinCooldown;
         }
 
         private IEnumerator Attack(Enemy enemy)
@@ -59,7 +61,7 @@ namespace Projectiles.Towers
                             default:
                                 throw new ArgumentOutOfRangeException();
                         }
-
+                        weaponInstance.transform.SetParent(ResourcesProvider.Instance.ObjectPool.DefendersParent);
                         var bullet = weaponInstance.GetComponent<Bullet>();
                         bullet.Type = AmmoType;
                         bullet.Owner = this;

@@ -13,15 +13,24 @@ namespace Game.Wave
 {
     public class WavesHandler : MonoBehaviour //Wave controller that should check currently game state
     {
+        public static WavesHandler Instance;
         public int CurrentWave;
         public Wave Wave;
         private Pool _pool; //Pool with all active objects
-        [SerializeField] private Transform _parent;
         private List<EnemyName> _enemyNames;
+        public bool PlayableWave;
 
         //Event for handling active and destroyed enemies
         public delegate void DestroyedHandler();
         public delegate void EnemyHandler(Enemy enemy);
+
+        private void Awake()
+        {
+            if (Instance == null)
+                Instance = this;
+            else if (Instance != this)
+                Destroy(gameObject);
+        }
 
         private void Start()
         {
@@ -32,11 +41,8 @@ namespace Game.Wave
         private void NextWave() //Add smth like "Battle result" as arguments
         {
             CurrentWave++;
+            PlayableWave = true;
             Wave = new Wave(10 * CurrentWave, 20, 1000 * CurrentWave);
-            foreach (var defender in _pool.Defenders)
-            {
-                defender.GetComponent<EnemySelectorHandler>().PlayableWave = true;
-            }
             _enemyNames = Wave.GetEnemies();
             StartCoroutine(SpawnEnemies(Wave.EnemyCount, 1f));
             StartCoroutine(UpdateList());
@@ -66,7 +72,7 @@ namespace Game.Wave
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
-                var enemy = Instantiate(enemyName, _parent.transform).GetComponent<Enemy>();
+                var enemy = Instantiate(enemyName, ResourcesProvider.Instance.ObjectPool.DefendersParent.transform).GetComponent<Enemy>();
                 enemy.SetPath(ResourcesProvider.Instance.PathCreator.Nodes); //push nodes to enemy path
                 _pool.AddEnemy(enemy); //Add enemy to the pool
                 yield return new WaitForSeconds(timeDelay); //Wait for delay
@@ -84,6 +90,11 @@ namespace Game.Wave
         private void OnAllEnemiesDestroyed()
         {
             WavePassed();
+            if (CurrentWave == 2)
+            {
+                Screen.Instance.Push(2);
+                return;
+            }
             NextWave();
         } //Call next wave if all enemies are destroyed
     }

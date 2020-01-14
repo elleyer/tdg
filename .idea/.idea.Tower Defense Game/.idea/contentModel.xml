@@ -35,6 +35,16 @@
               <e p="Unlit_Lava_Simple.shader" t="Include" />
             </e>
           </e>
+          <e p="Simple Scene Fade Load System" t="Include">
+            <e p="Demo (You don't have to import this folder)" t="Include">
+              <e p="DemoScript.cs" t="Include" />
+            </e>
+            <e p="ReadMeFirst.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Fader.cs" t="Include" />
+              <e p="Initiate.cs" t="Include" />
+            </e>
+          </e>
           <e p="SuperTiled2Unity" t="Include">
             <e p="Examples" t="Include">
               <e p="Overhead" t="Include">
@@ -298,6 +308,8 @@
               </e>
               <e p="ResourcesProvider.cs" t="Include" />
             </e>
+            <e p="SessionManager.cs" t="Include" />
+            <e p="Tower.cs" t="Include" />
             <e p="Wave" t="Include">
               <e p="Wave.cs" t="Include" />
               <e p="WavesHandler.cs" t="Include" />
@@ -333,6 +345,7 @@
           </e>
           <e p="UI" t="Include">
             <e p="Buttons" t="Include">
+              <e p="MenuStates.cs" t="Include" />
               <e p="UpgradeBlockProperties.cs" t="Include" />
             </e>
             <e p="Camera" t="Include">

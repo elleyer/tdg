@@ -99,6 +99,7 @@ namespace Projectiles.Objects
                         default:
                             throw new ArgumentOutOfRangeException();
                     }
+                    gObject.transform.SetParent(ResourcesProvider.Instance.ObjectPool.DefendersParent);
                     ResourcesProvider.Instance.Pool.AddDefender(gObject.GetComponent<Defender>());
                     break;
                 case ObjectType.Bomb:

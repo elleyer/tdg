@@ -8,7 +8,7 @@ namespace Game.Resources.Profile
         public delegate void Operation(uint value);
 
         public event Operation OnOperationCreated;
-        private uint Balance { get; set; } = 10000;
+        private uint Balance { get; set; } = 1000000;
 
         private void Start() => OnOperationCreated?.Invoke(Balance);
 
@@ -16,6 +16,12 @@ namespace Game.Resources.Profile
         {
             Balance += value;
             OnOperationCreated?.Invoke(Balance);
+        }
+
+        public void SetBalance(uint value)
+        {
+            Balance = value;
+            OnOperationCreated?.Invoke(value);
         }
 
         public void AddBalanceByEnemy(Enemy enemy)
@@ -33,9 +39,6 @@ namespace Game.Resources.Profile
         {
             Balance -= value;
             OnOperationCreated?.Invoke(Balance);
+        }
     }
-
-
-
-}
 }

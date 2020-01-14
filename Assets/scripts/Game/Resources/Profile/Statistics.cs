@@ -5,12 +5,18 @@ namespace Game.Resources.Profile
 {
     public class Statistics : MonoBehaviour
     {
-        private int _wavesPassed, _enemiesDestroyed, _defendersCreated, _enemiesAlive;
+        private int _wavesPassed, _enemiesDestroyed, _defendersCreated, _enemiesAlive, _towerHealth;
         //We *Need* to use switch here.
         public void WavePassed()
         {
             _wavesPassed++;
             UserInterfaceContainer.Instance.InfoBlockData.UpdateWavesInfo(_wavesPassed);
+        }
+
+        public void UpdateTowerHealth(int value)
+        {
+            _towerHealth = value;
+            UserInterfaceContainer.Instance.InfoBlockData.UpdateTowerHealth(_towerHealth);
         }
 
         public void EnemyCreated()

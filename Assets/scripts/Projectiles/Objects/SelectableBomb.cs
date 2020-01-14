@@ -20,8 +20,8 @@ namespace Projectiles.Objects
                     Price = 500;
                     break;
                 case Bomb.BombTypes.Mine:
-                    Height = 2;
-                    Width = 2;
+                    Height = 1;
+                    Width = 1;
                     Price = 750;
                     break;
                 default:

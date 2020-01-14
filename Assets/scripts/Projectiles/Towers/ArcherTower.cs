@@ -1,7 +1,5 @@
-using System;
 using Game.Resources.Items;
 using Projectiles.Mobs;
-using UnityEngine;
 
 namespace Projectiles.Towers
 {
@@ -14,8 +12,9 @@ namespace Projectiles.Towers
             MaxDamage = 60;
             MinRadius = 0;
             MaxRadius = 7;
-            Cooldown = 0.5f;
-            MinCooldown = 0.1f;
+            Cooldown = 1f;
+            MinCooldown = 0.3f;
+            MaxCooldown = 1f;
             AmmoType = AmmoType.Bullet;
         }
     }

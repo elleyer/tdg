@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Game;
 using Game.Wave;
 using UnityEngine;
+using UnityEngine.UI;
 using Utils.Navigation;
 
 namespace Projectiles.Mobs
 {
     public class Enemy : MonoBehaviour //Base class for all the Enemies
     {
+        public Image HealthFill;
         public float Health = 100;
+        public float CoolDown;
         public float Speed;
         public float Damage;
         public EnemyType EnemyType;
@@ -47,10 +51,25 @@ namespace Projectiles.Mobs
             }
         }
 
-
         public void Hit(float value)
         {
             Health -= value;
+            HealthFill.fillAmount = 1f / 100f * Health;
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.GetComponent<Tower>() != null)
+                StartCoroutine(HitTower(other.GetComponent<Tower>()));
+        }
+
+        private IEnumerator HitTower(Tower tower)
+        {
+            while (tower != null)
+            {
+                tower.Hit((int)Damage);
+                yield return new WaitForSeconds(CoolDown);
+            }
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Linq;
 using Game.Resources;
+using Game.Wave;
 using Projectiles.Mobs;
 using Projectiles.Towers;
 using UnityEngine;
@@ -11,7 +12,6 @@ namespace AI.EnemySelector
     {
         private Defender _defender;
         private Enemy _enemy;
-        internal bool PlayableWave;
 
         public void Start()
         {
@@ -23,8 +23,8 @@ namespace AI.EnemySelector
         {
             while (true)
             {
-                if (!PlayableWave)
-                    yield return new WaitUntil(() => PlayableWave);
+                if (!WavesHandler.Instance.PlayableWave)
+                    yield return new WaitUntil(() => WavesHandler.Instance.PlayableWave);
                 var comparer = Mathf.Infinity;
                 foreach (var enemy in ResourcesProvider.Instance.Pool.Enemies.ToList().Where(enemy =>
                     Vector2.Distance(enemy.transform.position, gameObject.transform.position) < comparer
@@ -32,7 +32,6 @@ namespace AI.EnemySelector
                 {
                     comparer = Vector2.Distance(enemy.transform.position, gameObject.transform.position);
                     _enemy = enemy;
-                    Debug.Log($"I am {_defender.EnemyType} and he is {enemy.EnemyType}({enemy.name})");
                     if (comparer < _defender.MaxRadius && _enemy.Health > 0)
                     {
                         if (!_defender.Attacking)

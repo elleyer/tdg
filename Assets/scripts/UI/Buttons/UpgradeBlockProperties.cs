@@ -7,8 +7,10 @@ namespace UI.Buttons
 {
     public class UpgradeBlockProperties : MonoBehaviour
     {
-        public static UpgradeBlockProperties Instance = null;
+        public static UpgradeBlockProperties Instance;
         public Button UpgradeDamage, UpgradeCooldown, Sell, Delete;
+        public Text DamagePrice, CooldownPrice, SellPrice;
+        public Defender Targer;
 
         private void Awake()
         {
@@ -28,8 +30,19 @@ namespace UI.Buttons
 
         public void UpdateProperties(Defender defender)
         {
-            UpgradeDamage.onClick.AddListener(() => defender.GetComponent<HandleObject>().Upgrade(UpgradeType.Damage));
-            UpgradeCooldown.onClick.AddListener(() => defender.GetComponent<HandleObject>().Upgrade(UpgradeType.Cooldown));
+            var handleObject = defender.GetComponent<HandleObject>();
+
+            DamagePrice.text = defender.Damage < defender.MaxDamage ? handleObject.DamagePrice.ToString("F0") : "Maxed";
+            CooldownPrice.text = defender.Cooldown > defender.MinCooldown? handleObject.CooldownPrice.ToString("F0") : "Maxed";
+            SellPrice.text = ((uint)(defender.Damage / defender.Cooldown) * 10).ToString();
+
+            if (Targer == defender)
+                return;
+            Targer = defender;
+            RemoveListeners();
+            UpgradeDamage.onClick.AddListener(() => handleObject.Upgrade(UpgradeType.Damage));
+            UpgradeCooldown.onClick.AddListener(() => handleObject.Upgrade(UpgradeType.Cooldown));
+            Sell.onClick.AddListener(() => handleObject.Sell());
         }
     }
 }

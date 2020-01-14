@@ -6,5 +6,6 @@ namespace Game.Resources
     {
         public GameObject Tower, Mortar, Cannon, Bomb, Bullet, Rocket;
         public GameObject Ufo, Solider;
+        public Transform EnemiesParent, DefendersParent, BulletsParent;
     }
 }

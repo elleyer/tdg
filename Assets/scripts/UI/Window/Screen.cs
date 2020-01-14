@@ -24,19 +24,20 @@ namespace UI.Window
             switch ((ScreenType)screenType)
             {
                 case ScreenType.WavePassed:
-                    WavePassed.Show(3);
+                    WavePassed.Show(3, true);
                     break;
                 case ScreenType.Fail:
-                    LoseResult.Show(15);
+                    LoseResult.gameObject.SetActive(true);
+                    LoseResult.Show(0, false);
                     break;
                 case ScreenType.Win:
-                    WinResult.Show(15);
+                    WinResult.Show(15, false);
                     break;
                 case ScreenType.GameInfo:
-                    InfoHint.Show(3);
+                    InfoHint.Show(3, false);
                     break;
                 case ScreenType.LowHealth:
-                    LowHealth.Show(5);
+                    LowHealth.Show(5, true);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(screenType), screenType, null);
@@ -56,14 +57,14 @@ namespace UI.Window
                     Debug.Log(UpgradeableBlock.alpha);
                     if (UpgradeableBlock.alpha < 1)
                     {
-                        DOTween.To(() => UpgradeableBlock.alpha, x => UpgradeableBlock.alpha = x, 1f, 1f)
-                            .OnComplete(() => Debug.Log("Done"));
+                        UpgradeableBlock.gameObject.SetActive(true);
+                        DOTween.To(() => UpgradeableBlock.alpha, x => UpgradeableBlock.alpha = x, 1f, 0.4f);
                         _upgradableBlockHidden = false;
                     }
                     else
                     {
-                        DOTween.To(() => UpgradeableBlock.alpha, x => UpgradeableBlock.alpha = x, 0f, 1f)
-                            .OnComplete(() => Debug.Log("Done"));
+                        DOTween.To(() => UpgradeableBlock.alpha, x => UpgradeableBlock.alpha = x, 0f, 0.4f)
+                            .OnComplete(() => UpgradeableBlock.gameObject.SetActive(false));
                         _upgradableBlockHidden = true;
                     }
                     break;
@@ -77,8 +78,8 @@ namespace UI.Window
             if (!Input.GetMouseButtonDown(1))
                 return;
             if(!_upgradableBlockHidden)
-                DOTween.To(() => UpgradeableBlock.alpha, x => UpgradeableBlock.alpha = x, 0f, 1f)
-                    .OnComplete(() => Debug.Log("Done"));
+                DOTween.To(() => UpgradeableBlock.alpha, x => UpgradeableBlock.alpha = x, 0f, 0.4f)
+                    .OnComplete(() => UpgradeableBlock.gameObject.SetActive(false));
         }
     }
 
