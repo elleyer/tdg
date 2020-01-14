@@ -14243,7 +14243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentWave: 0
-  _parent: {fileID: 24800823}
+  PlayableWave: 0
 --- !u!114 &1108293350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14264,6 +14264,9 @@ MonoBehaviour:
   Rocket: {fileID: 1006983567901543993, guid: bb673fdef040ed44286d60cd8a473373, type: 3}
   Ufo: {fileID: 4267252996525430416, guid: 51701619ca26e1d44802f176d422bc29, type: 3}
   Solider: {fileID: 484560099112708667, guid: 35e26b41a56f9d846b3a20b5d19d6553, type: 3}
+  EnemiesParent: {fileID: 24800823}
+  DefendersParent: {fileID: 429508861}
+  BulletsParent: {fileID: 1863009413}
 --- !u!1 &1124845563
 GameObject:
   m_ObjectHideFlags: 0
